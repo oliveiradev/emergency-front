@@ -1,0 +1,12 @@
+<div class="content body">
+    <table class="table table-striped">
+        <tr>
+            <th>Descricao</th>
+            <th>Data do chamado</th>
+        </tr>
+        <tr ng-repeat="occurrence in occurrences">
+            <td>{{occurrence.description}}</td>
+            <td>{{occurrence.created_at}}</td>
+        </tr>
+    </table>
+</div>

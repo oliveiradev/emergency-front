@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Emergency</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="components/admin-lte/dist/css/AdminLTE.min.css" />
+    <link rel="stylesheet" href="components/admin-lte/dist/css/skins/skin-red.css" />
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body ng-app="emergencyApp" class="fixed skin-red">
+
+    <div class="wrapper">
+
+        <header class="main-header">
+            <!-- Logo -->
+            <!-- Logo -->
+            <a href="../index2.html" class="logo">
+                <!-- mini logo for sidebar mini 50x50 pixels -->
+                <span class="logo-mini"><b>Emg</b></span>
+                <!-- logo for regular state and mobile devices -->
+                <span class="logo-lg"><b>Emergency</b></span>
+            </a>
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="images/verdao.png" class="user-image" alt="User Image">
+                                <span class="hidden-xs">Felipe Oliveira</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <!-- User image -->
+                                <li class="user-header">
+                                    <img src="images/verdao.png" class="img-circle" alt="User Image">
+                                    <p>
+                                        Felipe Oliveira
+                                    </p>
+                                </li>
+
+                                <!-- Menu Footer-->
+                                <li class="user-footer">
+                                    <div class="pull-right">
+                                        <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <aside class="main-sidebar" ng-controller="menuCtrl">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <div style="position: relative; overflow: hidden; width: auto; height: 326px;" class="slimScrollDiv">
+                <div style="height: 326px; overflow: hidden; width: auto;" class="sidebar" id="scrollspy">
+
+                    <!-- sidebar menu: : style can be found in sidebar.less -->
+                    <ul class="nav sidebar-menu">
+                        <li class="header">MENU</li>
+                        <li ng-class="occurrence"><a href="#/ocorrencias">Ocorrências</a></li>
+                        <li class=""><a href="#/pendentes">Usuários pendentes</a></li>
+                    </ul>
+                </div>
+                <div style="background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%; width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 134.697px;" class="slimScrollBar"></div>
+                <div style="width: 3px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51) none repeat scroll 0% 0%; opacity: 0.2; z-index: 90; right: 1px;" class="slimScrollRail"></div>
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+
+    <div style="min-height: 141px;" class="content-wrapper">
+        <div ng-view></div>
+    </div>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="components/jquery/dist/jquery.js"></script>
+    <script src="components/angular/angular.js"></script>
+    <script src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="components/angular-animate/angular-animate.js"></script>
+    <script src="components/angular-cookies/angular-cookies.js"></script>
+    <script src="components/angular-resource/angular-resource.js"></script>
+    <script src="components/angular-route/angular-route.js"></script>
+    <script src="components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="components/angular-touch/angular-touch.js"></script>
+    <script src="components/angular-touch/angular-touch.js"></script>
+    <script src=" components/admin-lte/dist/js/app.min.js"></script>
+    <script src=" components/admin-lte/plugins/fastclick/fastclick.min.js"></script>
+
+
+
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/occurrenceCtrl.js"></script>
+    <script src="scripts/controllers/menuCtrl.js"></script>
+    <script src="scripts/services/occurrenceService.js"></script>
+    <script src="scripts/config/occurrenceConfig.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
