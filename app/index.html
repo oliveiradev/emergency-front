@@ -9,13 +9,15 @@
     <link rel="stylesheet" href="components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="components/admin-lte/dist/css/AdminLTE.min.css" />
     <link rel="stylesheet" href="components/admin-lte/dist/css/skins/skin-red.css" />
+
+    <link rel="stylesheet" href="components/ngToast/dist/ngToast.min.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 
 <body ng-app="emergencyApp" class="fixed skin-red">
-
+    <toast></toast>
     <div class="wrapper">
 
         <header class="main-header">
@@ -71,8 +73,7 @@
                     <!-- sidebar menu: : style can be found in sidebar.less -->
                     <ul class="nav sidebar-menu">
                         <li class="header">MENU</li>
-                        <li ng-class="occurrence"><a href="#/ocorrencias">Ocorrências</a></li>
-                        <li class=""><a href="#/pendentes">Usuários pendentes</a></li>
+                        <li ng-repeat="item in menuItens" ng-class="{ 'active': $index == selectedIndex }"><a href="{{item.url}}" ng-click="itemClicked($index)">{{item.name}}</a></li>
                     </ul>
                 </div>
                 <div style="background: rgba(0, 0, 0, 0.2) none repeat scroll 0% 0%; width: 3px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 134.697px;" class="slimScrollBar"></div>
@@ -96,6 +97,7 @@
     <script src="components/angular-resource/angular-resource.js"></script>
     <script src="components/angular-route/angular-route.js"></script>
     <script src="components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="components/ngToast/dist/ngToast.min.js"></script>
     <script src="components/angular-touch/angular-touch.js"></script>
     <script src="components/angular-touch/angular-touch.js"></script>
     <script src=" components/admin-lte/dist/js/app.min.js"></script>
@@ -110,8 +112,11 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/occurrenceCtrl.js"></script>
     <script src="scripts/controllers/menuCtrl.js"></script>
+    <script src="scripts/controllers/userCtrl.js"></script>
     <script src="scripts/services/occurrenceService.js"></script>
+    <script src="scripts/services/userService.js"></script>
     <script src="scripts/config/occurrenceConfig.js"></script>
+    <script src="scripts/config/userConfig.js"></script>
     <!-- endbuild -->
 </body>
 

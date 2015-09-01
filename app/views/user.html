@@ -1,0 +1,17 @@
+<div class="content body">
+    <h1>Usuários pendentes</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>Email</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="user in users">
+            <td>{{user.name}}</td>
+            <td>{{user.cpf}}</td>
+            <td>{{user.email}}</td>
+            <td><a class="btn btn-success pull-right" ng-click="confirmUser({{user.id}})">Confirmar</a></td>
+        </tr>
+    </table>
+</div>
